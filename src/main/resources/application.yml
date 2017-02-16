@@ -5,7 +5,6 @@ spring:
 server:
   port: 9001
 
-
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
@@ -14,12 +13,12 @@ eureka:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
-    enabled: true
+    enabled: false
 
 ##Turbine UI
 spring.boot.admin.routes.endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream
 
 spring.boot.admin.turbine:
-  enabled: true
+  enabled: false
   clusters: default
   url: http://localhost:8989/turbine.stream
